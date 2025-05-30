@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Application Form</title>
+    <style>
+        body {
+            font-family: Times New Roman, Times, serif;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+        fieldset {
+            margin-bottom: 10px;
+        }
+        label {
+            display: inline-block;
+            width: 140px;
+            vertical-align: top;
+        }
+        input[type="text"], input[type="email"], input[type="password"], input[type="date"], select, textarea {
+            width: 160px;
+            margin-bottom: 5px;
+        }
+        textarea {
+            width: 170px;
+            height: 40px;
+        }
+        .section-title {
+            font-weight: bold;
+        }
+        .inline {
+            width: auto;
+        }
+        .checkbox-group label {
+            width: auto;
+            margin-right: 10px;
+        }
+        .actions {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Job Application Form</h1>
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fname">First Name*</label>
+            <input type="text" id="fname" name="fname" required>
+            <br>
+            <label for="lname">Last Name*</label>
+            <input type="text" id="lname" name="lname" required>
+            <br>
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob">
+            <br>
+            <label>Gender</label>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male" class="inline">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female" class="inline">Female</label>
+            <input type="radio" id="other" name="gender" value="Other">
+            <label for="other" class="inline">Other</label>
+            <br>
+            <label for="profile">Profile Picture*</label>
+            <input type="file" id="profile" name="profile" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact Information</legend>
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="phone">Phone Number*</label>
+            <input type="text" id="phone" name="phone" placeholder="10-digit number" required>
+            <br>
+            <label for="address">Address</label>
+            <textarea id="address" name="address"></textarea>
+            <br>
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="India">India</option>
+                <option value="Other">Other</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Education Background</legend>
+            <label for="qualification">Highest Qualification</label>
+            <select id="qualification" name="qualification">
+                <option value="Graduate">Graduate</option>
+                <option value="Post Graduate">Post Graduate</option>
+                <option value="PhD">PhD</option>
+            </select>
+            <br>
+            <label for="specialization">Specialization</label>
+            <input type="text" id="specialization" name="specialization">
+            <br>
+            <label for="graduation">Year of Graduation</label>
+            <input type="text" id="graduation" name="graduation">
+        </fieldset>
+
+        <fieldset>
+            <legend>Job Preferences</legend>
+            <label for="role">Preferred Role</label>
+            <input type="text" id="role" name="role">
+            <br>
+            <label for="salary">Expected Salary</label>
+            <input type="text" id="salary" name="salary">
+            <br>
+            <label>Preferred Locations</label>
+            <span class="checkbox-group">
+                <input type="checkbox" id="bangalore" name="location" value="Bangalore">
+                <label for="bangalore" class="inline">Bangalore</label>
+                <input type="checkbox" id="delhi" name="location" value="Delhi">
+                <label for="delhi" class="inline">Delhi</label>
+                <input type="checkbox" id="remote" name="location" value="Remote">
+                <label for="remote" class="inline">Remote</label>
+                <input type="checkbox" id="pune" name="location" value="Pune">
+                <label for="pune" class="inline">Pune</label>
+            </span>
+            <br>
+            <label for="relocate">Willing to Relocate?</label>
+            <input type="checkbox" id="relocate" name="relocate">
+        </fieldset>
+
+        <fieldset>
+            <legend>Create Account</legend>
+            <label for="password">Password*</label>
+            <input type="password" id="password" name="password" placeholder="Min 6 characters" required>
+            <br>
+            <label for="confirmpassword">Confirm Password*</label>
+            <input type="password" id="confirmpassword" name="confirmpassword" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Resume</legend>
+            <label for="resume">Upload Resume (PDF only)*</label>
+            <input type="file" id="resume" name="resume" accept="application/pdf" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Agreement</legend>
+            <input type="checkbox" id="agree" name="agree" required>
+            <label for="agree" class="inline">I agree to the terms and conditions*</label>
+        </fieldset>
+
+        <div class="actions">
+            <input type="submit" value="Submit Application">
+            <input type="reset" value="Reset Form">
+        </div>
+    </form>
+</body>
+</html>
